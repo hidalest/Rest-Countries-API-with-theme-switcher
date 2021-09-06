@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 3rem;
 
   @include responsiveMax($phone) {
@@ -16,6 +16,7 @@
   font-size: 1.2rem;
   margin: 2rem;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.1);
 
   @include responsiveMax($phone) {
     width: 50rem;
