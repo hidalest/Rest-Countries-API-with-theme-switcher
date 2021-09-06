@@ -3,6 +3,7 @@
 // Elements
 
 const form = document.querySelector(".form");
+const inputSelect = document.querySelector(".form-select");
 const inputSearch = document.querySelector(".input--search");
 const countryContainerEl = document.querySelector(".countries");
 const countryFlag = document.querySelector(".country--img-flag");
@@ -16,13 +17,19 @@ const countryCapitalEl = document.querySelector(".country--info-capital span");
 class App {
   _countries;
   constructor() {
+    inputSearch.value = "";
+    inputSelect.value = "";
     this._loadCountries();
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       this._searchCountry();
     });
-  }
 
+    inputSelect.addEventListener("change", (e) => {
+      e.preventDefault();
+      this._filterCountryRegion();
+    });
+  }
   async _loadCountries() {
     const countries = await fetch(`https://restcountries.eu/rest/v2/all`);
     const data = await countries.json();
@@ -76,9 +83,17 @@ class App {
 
   _searchCountry() {
     console.log(`searching`);
-    const input = inputSearch.value;
+    const input = inputSearch.value.toLowerCase().trim();
     const filterCountries = this._countries.filter((country) => {
       return country.name.toLowerCase().startsWith(input);
+    });
+    this._renderCountries(filterCountries);
+  }
+
+  _filterCountryRegion() {
+    const input = inputSelect.value.toLowerCase().trim();
+    const filterCountries = this._countries.filter((country) => {
+      return country.region.toLowerCase().startsWith(input);
     });
     this._renderCountries(filterCountries);
   }
