@@ -82,12 +82,17 @@ body {
 
 .input--search {
   width: 60rem;
+
   border: none;
   padding: 1.5rem;
   padding-left: 2rem;
   border-radius: 5px;
   box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.1);
   background: url("/images/search.png") $white;
+
+  @include responsiveMax($table) {
+    width: 100%;
+  }
   @include darkMode {
     background-color: $darkColorElements;
     color: $white;

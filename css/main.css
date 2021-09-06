@@ -370,6 +370,12 @@ body {
   background: url("/images/search.png") white;
 }
 
+@media (max-width: 48em) {
+  .input--search {
+    width: 100%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .input--search {
     background-color: #2b3945;
