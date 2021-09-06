@@ -1,0 +1,14 @@
+.form-select-lg {
+  padding: 1.3rem 2rem;
+  margin-right: 4rem;
+  border: none;
+  box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.1);
+  align-self: center;
+  margin-top: 1rem;
+
+  @include darkMode {
+    background-color: $darkColorElements;
+    color: $white;
+    fill: $white;
+  }
+}

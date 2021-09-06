@@ -1,0 +1,24 @@
+$phone-mini: 320px;
+$phone: 480px;
+$table: 768px;
+$table-land: 1024px;
+$desktop: 1800px;
+
+@mixin responsiveMax($breakpoint) {
+  @media (max-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}
+@mixin responsiveMin($breakpoint) {
+  @media (min-width: $breakpoint/16px*1em) {
+    @content;
+  }
+}
+
+//Dark mode
+
+@mixin darkMode() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

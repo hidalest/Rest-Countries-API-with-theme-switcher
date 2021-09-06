@@ -1,0 +1,5 @@
+body.dark-theme,
+body.dark-theme > * {
+  background-color: $darkColorBackground;
+  color: $white;
+}

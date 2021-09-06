@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;900&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $lightColorBackground;
+
+  @include darkMode {
+    background-color: $darkColorBackground;
+    color: $white;
+  }
+}
+
+.header {
+  padding: $defaultPadding;
+  background-color: $white;
+  border-bottom: 2px solid rgba($color: $lightColorElements, $alpha: 0.2);
+  @include darkMode {
+    background-color: $darkColorElements;
+    color: $white;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsiveMax($phone) {
+    padding: 0;
+  }
+}
+
+.nav--title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  cursor: pointer;
+
+  @include responsiveMax($phone) {
+    font-size: 1.5rem;
+  }
+}
+
+.btn--darkMode {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+  @include darkMode {
+    color: $white;
+  }
+
+  @include responsiveMax($phone) {
+    font-size: 1rem;
+  }
+
+  & i {
+    margin-right: 0.5rem;
+  }
+}
+
+.main {
+  padding: $defaultPadding;
+}
+.sectionFilter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size: 1.5rem;
+
+  @include responsiveMax($phone-mini) {
+    justify-content: center;
+  }
+}
+
+.input--search {
+  width: 60rem;
+  border: none;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.1);
+  background: url("/images/search.png") $white;
+  @include darkMode {
+    background-color: $darkColorElements;
+    color: $white;
+  }
+}
