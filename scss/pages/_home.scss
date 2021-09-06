@@ -80,6 +80,12 @@ body {
   }
 }
 
+.form {
+  @include responsiveMax($table) {
+    width: 100%;
+  }
+}
+
 .input--search {
   width: 60rem;
 

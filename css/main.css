@@ -359,6 +359,12 @@ body {
   }
 }
 
+@media (max-width: 48em) {
+  .form {
+    width: 100%;
+  }
+}
+
 .input--search {
   width: 60rem;
   border: none;
