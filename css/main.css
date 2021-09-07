@@ -204,7 +204,9 @@ table {
 }
 
 .country--img {
-  min-height: 10rem;
+  min-height: 15rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .country--img-flag {
@@ -280,6 +282,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 3rem;
 }
 
 @media (max-width: 30em) {
@@ -300,34 +303,24 @@ body {
   }
 }
 
-.btn--darkMode {
-  background-color: transparent;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.4rem;
+.globe {
+  font-size: 1.3rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .btn--darkMode {
-    color: white;
-  }
+.globe i {
+  color: #2b3945;
 }
 
 @media (max-width: 30em) {
-  .btn--darkMode {
-    font-size: 1rem;
+  .globe i {
+    font-size: 1.8rem;
   }
 }
 
-.btn--darkMode i {
-  margin-right: 0.5rem;
+@media (prefers-color-scheme: dark) {
+  .globe i {
+    color: white;
+  }
 }
 
 .main {
@@ -349,6 +342,13 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   font-size: 1.5rem;
+  padding: 0 3rem;
+}
+
+@media (max-width: 30em) {
+  .sectionFilter {
+    padding: 0;
+  }
 }
 
 @media (max-width: 20em) {

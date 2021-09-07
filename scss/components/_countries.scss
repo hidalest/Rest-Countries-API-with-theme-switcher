@@ -27,7 +27,11 @@
   }
 
   &--img {
-    min-height: 10rem;
+    min-height: 15rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    // background: no-repeat center;
+    // background-size: cover;
     &-flag {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;

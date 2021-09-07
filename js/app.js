@@ -3,6 +3,8 @@
 // Elements
 
 const form = document.querySelector(".form");
+const title = document.querySelector(".nav--title");
+const darkModeBtn = document.querySelector(".btn--darkMode");
 const inputSelect = document.querySelector(".form-select");
 const inputSearch = document.querySelector(".input--search");
 const countryContainerEl = document.querySelector(".countries");
@@ -16,20 +18,29 @@ const countryCapitalEl = document.querySelector(".country--info-capital span");
 
 class App {
   _countries;
+  _selectedCountry;
   constructor() {
     inputSearch.value = "";
     inputSelect.value = "";
     this._loadCountries();
-    form.addEventListener("submit", (e) => {
+
+    inputSearch.onkeyup = (e) => {
       e.preventDefault();
       this._searchCountry();
+    };
+
+    countryContainerEl.addEventListener("click", (e) => {
+      this._selectCountry(e);
     });
+
+    title.onclick = () => (location.href = "index.html");
 
     inputSelect.addEventListener("change", (e) => {
       e.preventDefault();
       this._filterCountryRegion();
     });
   }
+
   async _loadCountries() {
     const countries = await fetch(`https://restcountries.eu/rest/v2/all`);
     const data = await countries.json();
@@ -47,11 +58,10 @@ class App {
     countryContainerEl.innerHTML = "";
     data.forEach((country) => {
       const html = `
-       <div class="country">
-          <div class="country--img">
-            <img src="${
-              country.flag
-            }" alt="country flag" class="country--img-flag" />
+       <div class="country" data-id="${country.alpha3Code}">
+          <div class="country--img" style="background: url(${
+            country.flag
+          }) no-repeat center; background-size: cover">
           </div>
           <div class="country--info">
             <h2 class="country--info-name">${country.name}</h2>
@@ -96,6 +106,24 @@ class App {
       return country.region.toLowerCase().startsWith(input);
     });
     this._renderCountries(filterCountries);
+  }
+
+  _selectCountry(e) {
+    const countryEl = e.target.closest(".country");
+    if (!countryEl) return;
+
+    const country = this._countries.find(
+      (el) => el.alpha3Code === countryEl.dataset.id
+    );
+
+    this._selectedCountry = country;
+
+    // Save the selected country on LocalStorage
+    this._setLocalStorage(country);
+  }
+
+  _setLocalStorage(data) {
+    localStorage.setItem("country", JSON.stringify(data));
   }
 }
 
