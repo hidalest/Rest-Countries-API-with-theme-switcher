@@ -189,6 +189,18 @@ table {
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.country:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 30em) {

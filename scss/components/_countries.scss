@@ -17,6 +17,14 @@
   margin: 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.1);
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.25s;
+    box-shadow: 1px 1px 30px rgba($color: #000000, $alpha: 0.5);
+  }
 
   @include responsiveMax($phone) {
     width: 50rem;
