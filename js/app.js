@@ -13,8 +13,13 @@ const countryNameEl = document.querySelector(".country--info-name");
 const countryPopulationEl = document.querySelector(
   ".country--population-number"
 );
+
+let countryEl;
 const countryRegionEl = document.querySelector(".country--info-region span");
 const countryCapitalEl = document.querySelector(".country--info-capital span");
+const numberConvert = (number) => {
+  return new Intl.NumberFormat("en-US").format(number);
+};
 
 class App {
   _countries;
@@ -51,9 +56,6 @@ class App {
 
   _createCountries(data) {
     //   Convert numbers to format (used for population)
-    const numberConvert = (number) => {
-      return new Intl.NumberFormat("en-US").format(number);
-    };
 
     countryContainerEl.innerHTML = "";
     data.forEach((country) => {
@@ -85,6 +87,14 @@ class App {
       `;
       countryContainerEl.insertAdjacentHTML("beforeend", html);
     });
+
+    // Need to refactor this, is not a good location to call the event
+    countryEl = document.querySelectorAll(".country");
+    countryEl.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        window.location.href = "/country.html";
+      });
+    });
   }
 
   _renderCountries(region) {
@@ -92,7 +102,6 @@ class App {
   }
 
   _searchCountry() {
-    console.log(`searching`);
     const input = inputSearch.value.toLowerCase().trim();
     const filterCountries = this._countries.filter((country) => {
       return country.name.toLowerCase().startsWith(input);

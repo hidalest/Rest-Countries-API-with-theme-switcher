@@ -1,0 +1,83 @@
+.main2 {
+  padding: 0 7rem;
+  margin-top: 3rem;
+  width: 80%;
+
+  @include responsiveMax($phone) {
+    padding: 0 2rem;
+    width: 100%;
+  }
+}
+.selectedCountry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
+
+  .flag {
+    width: 50rem;
+
+    & img {
+      width: 100%;
+    }
+    @include responsiveMax($phone) {
+      margin-bottom: 10rem;
+    }
+  }
+  .pannel {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+
+    &--country {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-bottom: 2rem;
+    }
+
+    .pannelInfo {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 1.2rem;
+
+      & > * {
+        margin: 2rem 0;
+
+        & > * {
+          margin: 2rem 0;
+        }
+      }
+
+      & span {
+        font-weight: 600;
+      }
+
+      @include responsiveMax($phone) {
+        flex-direction: column;
+      }
+      &--borders {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10rem;
+
+        @include responsiveMax($phone) {
+          height: 10rem;
+        }
+
+        & button {
+          padding: 0.5rem 2rem;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+    .pannelInfo--b-countries {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+}

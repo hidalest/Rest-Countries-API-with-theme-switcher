@@ -255,6 +255,181 @@ table {
   margin-bottom: 1.3rem;
 }
 
+.btn {
+  background-color: white;
+  color: #2b3945;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn i {
+  margin-right: 1.5rem;
+  font-size: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    background-color: #2b3945;
+    color: white;
+  }
+}
+
+.main2 {
+  padding: 0 7rem;
+  margin-top: 3rem;
+  width: 80%;
+}
+
+@media (max-width: 30em) {
+  .main2 {
+    padding: 0 2rem;
+    width: 100%;
+  }
+}
+
+.selectedCountry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8rem;
+}
+
+.selectedCountry .flag {
+  width: 50rem;
+}
+
+.selectedCountry .flag img {
+  width: 100%;
+}
+
+@media (max-width: 30em) {
+  .selectedCountry .flag {
+    margin-bottom: 10rem;
+  }
+}
+
+.selectedCountry .pannel {
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selectedCountry .pannel--country {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.selectedCountry .pannel .pannelInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1.2rem;
+}
+
+.selectedCountry .pannel .pannelInfo > * {
+  margin: 2rem 0;
+}
+
+.selectedCountry .pannel .pannelInfo > * > * {
+  margin: 2rem 0;
+}
+
+.selectedCountry .pannel .pannelInfo span {
+  font-weight: 600;
+}
+
+@media (max-width: 30em) {
+  .selectedCountry .pannel .pannelInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.selectedCountry .pannel .pannelInfo--borders {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 30em) {
+  .selectedCountry .pannel .pannelInfo--borders {
+    height: 10rem;
+  }
+}
+
+.selectedCountry .pannel .pannelInfo--borders button {
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+}
+
+.selectedCountry .pannel .pannelInfo--b-countries {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 html {
   font-size: 10px;
 }
@@ -295,6 +470,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2b3945;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav a {
+    color: white;
+  }
 }
 
 @media (max-width: 30em) {
