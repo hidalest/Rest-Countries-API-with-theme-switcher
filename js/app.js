@@ -92,7 +92,7 @@ class App {
     countryEl = document.querySelectorAll(".country");
     countryEl.forEach((el) => {
       el.addEventListener("click", (e) => {
-        window.location.href = "/country.html";
+        window.location.href = "country.html";
       });
     });
   }
