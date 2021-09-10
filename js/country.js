@@ -27,12 +27,6 @@ class Country {
     this._createCountry(data);
   }
 
-  //FIXME DELETEE
-  _showData() {
-    console.log(this._country);
-    return this._country;
-  }
-
   _createCountry(data) {
     // const dataLanguage =>
     countryContainer.innerHTML = "";
