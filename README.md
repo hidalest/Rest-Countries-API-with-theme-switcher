@@ -32,10 +32,10 @@ Users should be able to:
 
 ### Screenshot
 
-![images/screenshot1.png](images/screenshot1.png)
-![images/screenshot2.png](images/screenshot2.png)
-![images/screenshot3.png](images/screenshot3.png)
-![images/screenshot4.png](images/screenshot4.png)
+![images/screenshot11.png](images/screenshot11.png)
+![images/screenshot22.png](images/screenshot22.png)
+![images/screenshot33.png](images/screenshot33.png)
+![images/screenshot44.png](images/screenshot44.png)
 
 ### Links
 
