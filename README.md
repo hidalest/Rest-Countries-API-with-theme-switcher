@@ -70,6 +70,8 @@ First I did the main home page to show all the countries, worked on the search a
 How to implement dark mode based on user device preference.
 Reinforcement of working with array methods, async functions, local storage and OOP.
 
+-> Proud of this CSS code
+
 ```css
 /* Responsive design Mixins */
 $phone-mini: 320px;
@@ -95,6 +97,8 @@ $desktop: 1800px;
   }
 }
 ```
+
+-> Proud of this JS code
 
 ```js
 // Search a country based on the user input and the filter applied
