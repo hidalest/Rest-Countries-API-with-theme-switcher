@@ -32,10 +32,10 @@ Users should be able to:
 
 ### Screenshot
 
-![images/screenshot1.png](./screenshot1.png)
-![images/screenshot2.png](./screenshot2.png)
-![images/screenshot3.png](./screenshot3.png)
-![images/screenshot4.png](./screenshot4.png)
+![images/screenshot1.png](images/screenshot1.png)
+![images/screenshot2.png](images/screenshot2.png)
+![images/screenshot3.png](images/screenshot3.png)
+![images/screenshot4.png](images/screenshot4.png)
 
 ### Links
 
@@ -129,3 +129,6 @@ Instead of working with local Storage to have data from 1 page to another I will
 - Github - [https://github.com/ehidalgo506-devAdd your name here](https://github.com/ehidalgo506-dev)
 - Frontend Mentor - [@ehidalgo506-dev](https://www.frontendmentor.io/profile/yourusernamehttps://www.frontendmentor.io/profile/ehidalgo506-dev)
 - LinkedIn - [@ehidalgo204](https://www.linkedin.com/in/ehidalgo204/)
+  worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
