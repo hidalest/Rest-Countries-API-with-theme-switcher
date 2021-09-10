@@ -16,11 +16,12 @@
 
   .flag {
     width: 50rem;
+    margin-bottom: 10rem;
 
     & img {
       width: 100%;
     }
-    @include responsiveMax($phone) {
+    @include responsiveMax($table-land) {
       margin-bottom: 10rem;
     }
   }
@@ -63,6 +64,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 10rem;
+        height: 10rem;
 
         @include responsiveMax($phone) {
           height: 10rem;

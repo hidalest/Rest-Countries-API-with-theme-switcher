@@ -333,13 +333,14 @@ table {
 
 .selectedCountry .flag {
   width: 50rem;
+  margin-bottom: 10rem;
 }
 
 .selectedCountry .flag img {
   width: 100%;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 64em) {
   .selectedCountry .flag {
     margin-bottom: 10rem;
   }
@@ -409,6 +410,7 @@ table {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 10rem;
+  height: 10rem;
 }
 
 @media (max-width: 30em) {

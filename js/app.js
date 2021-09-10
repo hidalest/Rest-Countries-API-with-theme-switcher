@@ -34,6 +34,14 @@ class App {
       this._searchCountry();
     };
 
+    inputSelect.onchange = (e) => {
+      inputSearch.value = "";
+    };
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+
     countryContainerEl.addEventListener("click", (e) => {
       this._selectCountry(e);
     });
@@ -47,11 +55,22 @@ class App {
   }
 
   async _loadCountries() {
-    const countries = await fetch(`https://restcountries.eu/rest/v2/all`);
-    const data = await countries.json();
-    this._countries = data;
+    try {
+      const response = await fetch(`https://restcountries.eu/rest/v2/all`);
 
-    this._renderCountries(this._countries);
+      if (!response.ok)
+        throw new Error(
+          `Unable to get the countries, error(${response.status})`
+        );
+
+      const data = await response.json();
+      this._countries = data;
+
+      localStorage.setItem("countries", JSON.stringify(this._countries));
+      this._renderCountries(this._countries);
+    } catch (error) {
+      alert(error);
+    }
   }
 
   _createCountries(data) {
@@ -103,8 +122,16 @@ class App {
 
   _searchCountry() {
     const input = inputSearch.value.toLowerCase().trim();
+    const select = inputSelect.value;
     const filterCountries = this._countries.filter((country) => {
-      return country.name.toLowerCase().startsWith(input);
+      if (select === "") {
+        return country.name.toLowerCase().startsWith(input);
+      }
+
+      return (
+        country.name.toLowerCase().startsWith(input) &&
+        country.region === select
+      );
     });
     this._renderCountries(filterCountries);
   }
