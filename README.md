@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/ehidalgo506-dev/Rest-Countries-API-with-theme-switcher](https://your-solution-url.comhttps://github.com/ehidalgo506-dev/Rest-Countries-API-with-theme-switcher)
-- Live Site URL: [https://ehidalgo506-dev.github.io/Rest-Countries-API-with-theme-switcher/](https://your-live-site-url.comhttps://ehidalgo506-dev.github.io/Rest-Countries-API-with-theme-switcher/)
+- Solution URL: [https://github.com/hidalest/Rest-Countries-API-with-theme-switcher](https://github.com/hidalest/Rest-Countries-API-with-theme-switcher)
+- Live Site URL: [https://hidalest.github.io/Rest-Countries-API-with-theme-switcher/](https://hidalest.github.io/Rest-Countries-API-with-theme-switcher/)
 
 ## My process
 
@@ -130,9 +130,6 @@ Instead of working with local Storage to have data from 1 page to another I will
 
 ## Author
 
-- Github - [https://github.com/ehidalgo506-devAdd your name here](https://github.com/ehidalgo506-dev)
-- Frontend Mentor - [@ehidalgo506-dev](https://www.frontendmentor.io/profile/yourusernamehttps://www.frontendmentor.io/profile/ehidalgo506-dev)
-- LinkedIn - [@ehidalgo204](https://www.linkedin.com/in/ehidalgo204/)
-  worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [https://github.com/hidalest your name here](https://github.com/hidalest)
+- Frontend Mentor - [@hidalest](https://www.frontendmentor.io/profile/yourusernamehttps://www.frontendmentor.io/profile/hidalest)
+- LinkedIn - [@hidalest](https://www.linkedin.com/in/hidalest/)
